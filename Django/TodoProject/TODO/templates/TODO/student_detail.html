@@ -1,0 +1,23 @@
+{% extends 'student_form.html'%}
+{% load static %}
+
+{% block content %}
+<h5> Details of the User<h5>
+{% endblock content %}
+
+
+{% block content1 %}
+<ul>
+<li>{{object.first_name}}</li>                         
+<li>{{object.email}}</li> 
+</ul>
+{% endblock content1 %}
+
+
+
+{% block content2 %}
+<a href="/list"><h6>Click here to go back to List</h6></a>        
+<hr/>
+{% endblock content2 %}
+
+

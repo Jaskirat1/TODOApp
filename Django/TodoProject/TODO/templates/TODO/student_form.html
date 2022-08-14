@@ -1,0 +1,51 @@
+{% load static %}
+{% block navbar %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<!-- CSS Custom File -->
+<link href="{% static 'Myapp/static/css/bootstrap.min.css' %}" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">TODO App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="list/">List of Ids</a>
+             </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="list/">Details of User</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+</nav>
+{% endblock navbar %}
+
+
+{% block content %}
+<div class="container">
+
+     <form style="text-align: center;" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input class ="button" type="Submit" value="Submit" >
+     </form>
+</div>
+{% endblock content %}
+
+{% block content1 %}
+{% endblock content1 %}
+{% block content2 %}
+{% endblock content2 %}
+{% block content3 %}
+{% endblock content3 %}
+{% block content4 %}
+{% endblock content4 %}
+{% block content5 %}
+{% endblock content5 %}

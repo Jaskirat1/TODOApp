@@ -1,0 +1,28 @@
+{% extends 'student_form.html'%}
+{% load static %}
+
+{% block content %}
+<h2>List of Ids</h2>
+<p>Click on Ids to view detail of each student and Click on Edit to Update Information.</p>
+
+{% endblock content %}
+
+{% block content1 %}
+<ul>
+    {% for object in object_list %}
+
+    <li><a href="/details/{{object.id}}">{{object.id}}</a> | <a href="/update/{{object.id}}">Edit</a> | <a href="/delete/{{object.id}}">Delete</a></li>
+        
+
+    <hr/>
+
+    {% endfor %}
+
+</ul>
+{% endblock content1 %}
+{% block content2 %}
+<ul>
+
+<a href="/">Click here to go back.</a>
+</ul>
+{% endblock content2 %}

@@ -1,0 +1,28 @@
+{% extends 'student_list.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Delete User</h2>
+{% endblock content %}
+{% block delete %}
+<ul>
+    
+        {% for object in object_list %}
+
+        <li><a href="list/delete/{{object.id}}">{{object.id}} Delete</a> </li>
+        <hr/>
+
+        {% endfor %}
+       
+
+</ul>
+{% endblock delete %}
+
+{% block content2 %}
+<form method="post">
+    {% csrf_token %}
+    <p> Are you sure you want to delete this id "{{ object }}" ?</p>
+    <input type="submit" value="Confirm">
+</form>
+{% endblock content2 %}
+
